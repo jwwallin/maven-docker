@@ -10,10 +10,4 @@ RUN mkdir -p /usr/share/maven /usr/share/maven/ref \
   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
 
 ENV MAVEN_HOME /usr/share/maven
-ENV MAVEN_CONFIG /root/.m2
-
-COPY entrypoint.sh /usr/local/bin/entrypoint.sh
-COPY settings-docker.xml /usr/share/maven/ref/
-
-ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 CMD ["mvn"]
