@@ -1,4 +1,4 @@
-FROM docker:dind
+FROM docker:19
 
 RUN apk add openjdk11-jdk curl
 
