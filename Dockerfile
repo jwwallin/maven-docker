@@ -10,4 +10,7 @@ RUN mkdir -p /usr/share/maven /usr/share/maven/ref \
   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
 
 ENV MAVEN_HOME /usr/share/maven
+
+EXPOSE 8000 8080 8032
+
 CMD ["mvn"]
